@@ -1,0 +1,6 @@
+framework module Pods_FriendShareTests {
+  umbrella header "Pods-FriendShareTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
