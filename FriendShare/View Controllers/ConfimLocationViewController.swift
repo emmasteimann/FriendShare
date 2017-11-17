@@ -120,14 +120,17 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
     switch result {
     case .cancelled:
       print("Message was cancelled")
+      self.dismiss(animated: true, completion: nil)
       reloadToMain()
       
     case .failed:
       print("Message failed")
+      self.dismiss(animated: true, completion: nil)
       reloadToMain()
       
     case .sent:
       print("Message was sent")
+      self.dismiss(animated: true, completion: nil)
       reloadToMain()
       
     default:
@@ -139,7 +142,6 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! ViewController
     self.navigationController?.setViewControllers([mainVC], animated: false)
-    self.dismiss(animated: true, completion: nil)
   }
   
   func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
