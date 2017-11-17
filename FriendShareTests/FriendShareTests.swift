@@ -43,8 +43,8 @@ class UserDataSpec: QuickSpec {
           expect(dpl).to(beAKindOf(DPLDeepLink.self))
           var processed = uD.processUserDeepLink(link: dpl)
           expect(processed).to(beAKindOf(Dictionary<String, Any>.self))
-          var personId = processed["personId"]
-          expect(personId).to(be(equal("1234")))
+          var personId = processed["personId"] as! String
+          expect(personId).to(equal("1234"))
         }
       }
     }
@@ -59,7 +59,7 @@ class UserDataSpec: QuickSpec {
     } catch {}
     let jsonString = String(data: jsonData!, encoding: .utf8)
     
-    let encryptedPlace = UserData.sharedInstance.encryptToHexString("{'placeName':'Meow','latitude':'39.627335','longitude':'-105.152159'}")
+    let encryptedPlace = UserData.sharedInstance.encryptToHexString("{\n  \"latitude\" : \"40.7127753\",\n  \"name\" : \"New York\",\n  \"placeID\" : \"ChIJOwg_06VPwokRYv534QaPC8g\",\n  \"longitude\" : \"-74.0059728\"\n}")
     let encryptedAccount = UserData.sharedInstance.encryptToHexString(jsonString!)
     
     deepLink["place"] = encryptedPlace
