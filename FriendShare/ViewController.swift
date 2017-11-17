@@ -7,14 +7,15 @@
 //
 
 import UIKit
-import ContactsUI
 import SnapKit
 
-class ViewController: UIViewController, CNContactPickerDelegate {
+class ViewController: UIViewController {
 
+  @IBOutlet weak var ShareLocationButton: UIButton!
   @IBOutlet weak var ShareLocationView: UIView!
   @IBOutlet weak var FriendHistoryView: UIView!
   
+  @IBOutlet weak var FriendHistoryButton: UIButton!
   @IBAction func clickShare(_ sender: Any) {
 //    let cnPicker = CNContactPickerViewController()
 //    cnPicker.delegate = self
@@ -46,25 +47,20 @@ class ViewController: UIViewController, CNContactPickerDelegate {
       make.height.equalTo((self.view.frame.height / 2))
       make.top.equalTo(self.view)
     }
+    
     FriendHistoryView.snp.makeConstraints { (make) -> Void in
       make.width.equalTo(self.view.frame.width)
       make.height.equalTo((self.view.frame.height / 2))
       make.bottom.equalTo(self.view)
     }
     
-  }
-  
-  func contactPicker(_ picker: CNContactPickerViewController, didSelect contacts: [CNContact]) {
-    contacts.forEach { contact in
-      for number in contact.phoneNumbers {
-        let phoneNumber = number.value
-        print("number is = \(phoneNumber)")
-      }
+    ShareLocationButton.snp.makeConstraints { (make) -> Void in
+      make.center.equalTo(ShareLocationView)
     }
-  }
-  
-  func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
-    print("Cancel Contact Picker")
+    
+    FriendHistoryButton.snp.makeConstraints { (make) -> Void in
+      make.center.equalTo(FriendHistoryView)
+    }
   }
 
 }
