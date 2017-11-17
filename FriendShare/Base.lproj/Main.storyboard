@@ -71,6 +71,37 @@
             </objects>
             <point key="canvasLocation" x="1126" y="-36"/>
         </scene>
+        <!--Save User Location View Controller-->
+        <scene sceneID="ABQ-2O-Ke3">
+            <objects>
+                <viewController storyboardIdentifier="SaveUserLocationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Suw-v2-kmL" customClass="SaveUserLocationViewController" customModule="FriendShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yXS-3G-evz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odN-8Z-f1Y" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="484"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03m-kQ-xkK">
+                                <rect key="frame" x="0.0" y="470" width="375" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Gn5-SR-0sr"/>
+                    </view>
+                    <connections>
+                        <outlet property="UserLocationNameView" destination="03m-kQ-xkK" id="8tb-Le-GM6"/>
+                        <outlet property="mapView" destination="odN-8Z-f1Y" id="KqC-yj-7qY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXd-UU-Iek" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="743.20000000000005" y="730.88455772113946"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="dON-eL-caE">
             <objects>
@@ -102,16 +133,16 @@
             </objects>
             <point key="canvasLocation" x="325.60000000000002" y="-36.431784107946029"/>
         </scene>
-        <!--Table View Controller-->
+        <!--History Table View Controller-->
         <scene sceneID="Ah0-Wz-grY">
             <objects>
-                <tableViewController id="nla-Xx-aKN" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="HistoryTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nla-Xx-aKN" customClass="HistoryTableViewController" customModule="FriendShare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nZR-uD-hBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="59H-5a-5DA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TableViewCell" selectionStyle="default" indentationWidth="10" id="59H-5a-5DA" customClass="TableViewCell" customModule="FriendShare" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="59H-5a-5DA" id="w5B-0A-LSA">
@@ -128,7 +159,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IVX-Vx-LGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2175" y="441"/>
+            <point key="canvasLocation" x="2173.5999999999999" y="440.32983508245883"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="FhL-Tj-uKz">

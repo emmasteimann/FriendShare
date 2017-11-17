@@ -54,6 +54,9 @@ class ShareViewController: UIViewController {
   }
   
   @IBAction func autocompletePicker(_ sender: Any) {
+    let autocompleteController = GMSAutocompleteViewController()
+    autocompleteController.delegate = self
+    present(autocompleteController, animated: true, completion: nil)
   }
 }
 
@@ -77,3 +80,31 @@ extension ShareViewController : GMSPlacePickerViewControllerDelegate {
   }
 }
 
+extension ShareViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let confirmLocationVC = storyboard.instantiateViewController(withIdentifier: "ConfimLocationViewController") as! ConfimLocationViewController
+    confirmLocationVC.setPlace(place:place)
+    self.navigationController?.pushViewController(confirmLocationVC, animated: false)
+    viewController.dismiss(animated: true, completion: nil)
+  }
+  
+  func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+    print("Error: ", error.localizedDescription)
+  }
+  
+  // User canceled the operation.
+  func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+    dismiss(animated: true, completion: nil)
+  }
+  
+  // Turn the network activity indicator on and off again.
+  func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+  }
+  
+  func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+  }
+  
+}

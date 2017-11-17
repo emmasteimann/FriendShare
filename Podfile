@@ -9,7 +9,7 @@ target 'FriendShare' do
   pod 'GooglePlacePicker', '= 2.5.0'
   pod 'GooglePlaces', '= 2.5.0'
   pod 'GoogleMaps', '= 2.5.0'
-  pod 'DeepLinkKit'
+  pod 'DeepLinkKit', :git => 'git@github.com:button/DeepLinkKit.git', :tag => '1.5.0'
   pod 'CryptoSwift'
   
   # We're using Facebook to maintain and share unique Friend IDs

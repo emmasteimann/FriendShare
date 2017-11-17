@@ -17,6 +17,7 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
   @IBOutlet weak var mapView: GMSMapView!
   @IBOutlet weak var LocationTitleView: UIView!
   private var place: GMSPlace?
+  private let cnPicker = CNContactPickerViewController()
 
   func setPlace(place: GMSPlace) {
     self.place = place
@@ -61,7 +62,7 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
       } else {
         label.text = coords
       }
-      let font = UIFont.boldSystemFont(ofSize: 28)
+      let font = UIFont.boldSystemFont(ofSize: 26)
       label.font = font
       label.textColor = UIColor.white
       
@@ -79,12 +80,7 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
   }
   
   @objc func confirmLocation(sender: UIBarButtonItem) {
-    let cnPicker = CNContactPickerViewController()
     cnPicker.predicateForEnablingContact = NSPredicate(format: "phoneNumbers.@count > 0")
-    
-    // Ignore..
-    //    cnPicker.predicateForEnablingContact = NSPredicate(format: "key == phoneNumber")
-    //    cnPicker.predicateForEnablingContact = NSPredicate(format: "phoneNumbers.@count == 1")
     cnPicker.delegate = self
     self.present(cnPicker, animated: true, completion: nil)
   }
@@ -104,6 +100,7 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
   
   func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
     if MFMessageComposeViewController.canSendText(){
+      cnPicker.dismiss(animated: false, completion: nil)
       let contactPhoneValue = contact.phoneNumbers.first as! CNLabeledValue<CNPhoneNumber>
       
       let phone = contactPhoneValue.value.stringValue
@@ -125,19 +122,26 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
     switch result {
     case .cancelled:
       print("Message was cancelled")
-      controller.dismiss(animated: true, completion: nil)
+      reloadToMain()
       
     case .failed:
       print("Message failed")
-      controller.dismiss(animated: true, completion: nil)
+      reloadToMain()
       
     case .sent:
       print("Message was sent")
-      controller.dismiss(animated: false, completion: nil)
+      reloadToMain()
       
     default:
       break
     }
+  }
+  
+  func reloadToMain() {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let mainVC = storyboard.instantiateViewController(withIdentifier: "MainViewController") as! ViewController
+    self.navigationController?.setViewControllers([mainVC], animated: false)
+    self.dismiss(animated: true, completion: nil)
   }
   
   func contactPickerDidCancel(_ picker: CNContactPickerViewController) {

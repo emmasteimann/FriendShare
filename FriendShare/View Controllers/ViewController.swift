@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import GoogleMaps
 
 class ViewController: UIViewController {
 
@@ -60,6 +61,15 @@ class ViewController: UIViewController {
     
     FriendHistoryButton.snp.makeConstraints { (make) -> Void in
       make.center.equalTo(FriendHistoryView)
+    }
+    if UserData.sharedInstance.pendingSave {
+      let userLocInfo = UserData.sharedInstance.pendingLocationSave!
+      UserData.sharedInstance.pendingLocationSave = nil
+      UserData.sharedInstance.pendingSave = false
+      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+      let saveVc = storyboard.instantiateViewController(withIdentifier: "SaveUserLocationViewController") as! SaveUserLocationViewController
+      saveVc.setUserInfo(longitude: userLocInfo["longitude"] as! String, latitude: userLocInfo["latitude"] as! String, name: userLocInfo["name"]! as! String, personId: userLocInfo["personId"]! as! String, placeName: userLocInfo["placeName"]! as! String)
+      self.navigationController?.pushViewController(saveVc, animated: true)
     }
   }
 

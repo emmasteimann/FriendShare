@@ -15,14 +15,16 @@
 		212F45791FBD86D3000D409A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 212F45771FBD86D3000D409A /* LaunchScreen.storyboard */; };
 		212F45841FBD86D3000D409A /* FriendShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F45831FBD86D3000D409A /* FriendShareTests.swift */; };
 		212F458F1FBD93F5000D409A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F458E1FBD93F5000D409A /* ShareViewController.swift */; };
-		212F45911FBD9406000D409A /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F45901FBD9406000D409A /* HistoryViewController.swift */; };
 		212F45931FBD9896000D409A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212F45921FBD9896000D409A /* Keys.swift */; };
 		2176378C1FBEC3DE00F2CCC1 /* ConfimLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176378B1FBEC3DE00F2CCC1 /* ConfimLocationViewController.swift */; };
 		2176378E1FBECC4100F2CCC1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176378D1FBECC4100F2CCC1 /* String+Extensions.swift */; };
 		217637901FBEE19600F2CCC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2176378F1FBEE19600F2CCC1 /* LoginViewController.swift */; };
 		217637921FBEE80600F2CCC1 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217637911FBEE80600F2CCC1 /* UserData.swift */; };
+		21BA70051FBF23BD00F5CC3E /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA70041FBF23BD00F5CC3E /* HistoryTableViewController.swift */; };
+		21BA70071FBF261700F5CC3E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BA70061FBF261700F5CC3E /* TableViewCell.swift */; };
 		21D668E21FBEEF5600FCEA66 /* UIApplications+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D668E11FBEEF5600FCEA66 /* UIApplications+Extensions.swift */; };
 		21D668E41FBEFA7500FCEA66 /* GMSPlace+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D668E31FBEFA7500FCEA66 /* GMSPlace+Extensions.swift */; };
+		21D668E61FBF09C400FCEA66 /* SaveUserLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D668E51FBF09C400FCEA66 /* SaveUserLocationViewController.swift */; };
 		F15356A5F14C48B21521A50B /* Pods_FriendShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1D47476EB30C49B91C67D /* Pods_FriendShare.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,14 +52,16 @@
 		212F45831FBD86D3000D409A /* FriendShareTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendShareTests.swift; sourceTree = "<group>"; };
 		212F45851FBD86D3000D409A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		212F458E1FBD93F5000D409A /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
-		212F45901FBD9406000D409A /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		212F45921FBD9896000D409A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2176378B1FBEC3DE00F2CCC1 /* ConfimLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfimLocationViewController.swift; sourceTree = "<group>"; };
 		2176378D1FBECC4100F2CCC1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		2176378F1FBEE19600F2CCC1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		217637911FBEE80600F2CCC1 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		21BA70041FBF23BD00F5CC3E /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		21BA70061FBF261700F5CC3E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		21D668E11FBEEF5600FCEA66 /* UIApplications+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplications+Extensions.swift"; sourceTree = "<group>"; };
 		21D668E31FBEFA7500FCEA66 /* GMSPlace+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMSPlace+Extensions.swift"; sourceTree = "<group>"; };
+		21D668E51FBF09C400FCEA66 /* SaveUserLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserLocationViewController.swift; sourceTree = "<group>"; };
 		3A169571088DFB723E886E8A /* Pods-FriendShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-FriendShare/Pods-FriendShare.release.xcconfig"; sourceTree = "<group>"; };
 		9BF071A0591F9D02FD5C12A9 /* Pods-FriendShareTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FriendShareTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FriendShareTests/Pods-FriendShareTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9E97823C3CB579230F068F3 /* Pods_FriendShareTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FriendShareTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,12 +124,9 @@
 			children = (
 				217637881FBEBCD500F2CCC1 /* Utilities */,
 				212F456E1FBD86D3000D409A /* AppDelegate.swift */,
-				212F45701FBD86D3000D409A /* ViewController.swift */,
-				212F458E1FBD93F5000D409A /* ShareViewController.swift */,
-				212F45901FBD9406000D409A /* HistoryViewController.swift */,
-				2176378B1FBEC3DE00F2CCC1 /* ConfimLocationViewController.swift */,
-				2176378F1FBEE19600F2CCC1 /* LoginViewController.swift */,
-				217637911FBEE80600F2CCC1 /* UserData.swift */,
+				21BA70091FBF2C3300F5CC3E /* View Controllers */,
+				21BA70081FBF2C2700F5CC3E /* Data Handler */,
+				21BA700A1FBF2C4400F5CC3E /* Views */,
 				212F45721FBD86D3000D409A /* Main.storyboard */,
 				212F45751FBD86D3000D409A /* Assets.xcassets */,
 				212F45771FBD86D3000D409A /* LaunchScreen.storyboard */,
@@ -152,6 +153,35 @@
 				21D668E31FBEFA7500FCEA66 /* GMSPlace+Extensions.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		21BA70081FBF2C2700F5CC3E /* Data Handler */ = {
+			isa = PBXGroup;
+			children = (
+				217637911FBEE80600F2CCC1 /* UserData.swift */,
+			);
+			path = "Data Handler";
+			sourceTree = "<group>";
+		};
+		21BA70091FBF2C3300F5CC3E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				212F45701FBD86D3000D409A /* ViewController.swift */,
+				212F458E1FBD93F5000D409A /* ShareViewController.swift */,
+				2176378B1FBEC3DE00F2CCC1 /* ConfimLocationViewController.swift */,
+				21BA70041FBF23BD00F5CC3E /* HistoryTableViewController.swift */,
+				2176378F1FBEE19600F2CCC1 /* LoginViewController.swift */,
+				21D668E51FBF09C400FCEA66 /* SaveUserLocationViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		21BA700A1FBF2C4400F5CC3E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21BA70061FBF261700F5CC3E /* TableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5FDD9559FBFCCB6381600B16 /* Frameworks */ = {
@@ -409,12 +439,14 @@
 				212F458F1FBD93F5000D409A /* ShareViewController.swift in Sources */,
 				21D668E21FBEEF5600FCEA66 /* UIApplications+Extensions.swift in Sources */,
 				2176378C1FBEC3DE00F2CCC1 /* ConfimLocationViewController.swift in Sources */,
+				21BA70071FBF261700F5CC3E /* TableViewCell.swift in Sources */,
+				21D668E61FBF09C400FCEA66 /* SaveUserLocationViewController.swift in Sources */,
 				212F45711FBD86D3000D409A /* ViewController.swift in Sources */,
 				2176378E1FBECC4100F2CCC1 /* String+Extensions.swift in Sources */,
 				21D668E41FBEFA7500FCEA66 /* GMSPlace+Extensions.swift in Sources */,
 				212F456F1FBD86D3000D409A /* AppDelegate.swift in Sources */,
 				217637921FBEE80600F2CCC1 /* UserData.swift in Sources */,
-				212F45911FBD9406000D409A /* HistoryViewController.swift in Sources */,
+				21BA70051FBF23BD00F5CC3E /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +634,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZS7ZKS55YG;
 				INFOPLIST_FILE = FriendShareTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emmasteimann.FriendShareTests;
@@ -619,6 +652,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZS7ZKS55YG;
 				INFOPLIST_FILE = FriendShareTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.emmasteimann.FriendShareTests;
