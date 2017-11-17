@@ -18,15 +18,9 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var FriendHistoryButton: UIButton!
   @IBAction func clickShare(_ sender: Any) {
-//    let cnPicker = CNContactPickerViewController()
-//    cnPicker.delegate = self
-//    self.present(cnPicker, animated: true, completion: nil)
   }
   
   @IBAction func clickHistory(_ sender: Any) {
-//    let cnPicker = CNContactPickerViewController()
-//    cnPicker.delegate = self
-//    self.present(cnPicker, animated: true, completion: nil)
   }
   
   override func viewWillAppear(_ animated: Bool) {

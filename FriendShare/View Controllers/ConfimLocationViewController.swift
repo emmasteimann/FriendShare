@@ -48,7 +48,6 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
       rightButtonItem.tintColor = UIColor.green
       
       self.navigationItem.rightBarButtonItem = rightButtonItem
-      
     
       let nameString = place.name
       let coords = String(place.coordinate.latitude) + ", " + String(place.coordinate.longitude)
@@ -88,7 +87,6 @@ class ConfimLocationViewController: UIViewController, CNContactPickerDelegate, M
   private func configureMap() {
     // Place a marker on the map and center it on the desired coordinates.
     // 39.627335, -105.152159
-    let location =  CLLocationCoordinate2D(latitude: 39.627335, longitude: -105.152159)
     if let place = place {
       let marker = GMSMarker(position: place.coordinate)
       marker.map = mapView
