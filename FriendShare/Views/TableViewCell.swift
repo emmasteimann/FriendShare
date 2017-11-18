@@ -23,10 +23,14 @@ class TableViewCell: UITableViewCell {
         self.firstLoad = false
       }
       if cellString != "" {
-        label.snp.makeConstraints { (make) -> Void in
-          make.width.equalTo(self.contentView)
-          make.height.equalTo(self.contentView)
-        }
+        label.frame = contentView.frame
+        label.textAlignment = .center
+//        label.contentHuggingPriority(for: .horizontal)
+//
+//        label.snp.makeConstraints { (make) -> Void in
+//          make.width.equalTo(self.contentView)
+//          make.height.equalTo(self.contentView)
+//        }
         label.text = cellString
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = UIColor.black
@@ -34,7 +38,7 @@ class TableViewCell: UITableViewCell {
     }
   
     override func prepareForReuse() {
-      label.text = ""
+//      label.text = ""
     }
 
 }
